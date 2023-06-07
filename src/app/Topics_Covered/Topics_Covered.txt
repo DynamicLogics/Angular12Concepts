@@ -1,0 +1,15 @@
+01] Routing
+02] @Input and @Output
+03] Pipes and Custom Pipes
+04] Services
+05] Dependency Injection
+06] Structural Directives
+07] Custom Directives
+08] Encapsulation
+09] Abstraction
+10] Inheritence
+11] Polymorphism
+12] AuthGuard
+13] Interceptors
+14] Lazy loading
+15] RxJs Operators/methods

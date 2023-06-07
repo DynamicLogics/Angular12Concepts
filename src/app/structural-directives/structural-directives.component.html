@@ -1,0 +1,23 @@
+<p>structural-directives works!</p>
+<ul>
+    <!--Using for loop-->
+    <li *ngFor="let color of colorArray">
+        
+        {{color}}
+        
+        <!--Using if condition-->
+        <div *ngIf="color=='Red'">
+            <div>Roses are {{color}}</div>
+        </div>
+
+        <!-- Using SWITCH case -->
+        <div [ngSwitch]="color">
+            <div *ngSwitchCase="'Green'">Trees leaves are {{color}} in color</div>
+            <div *ngSwitchCase="'Blue'">Sky is {{color}}</div>
+            <div *ngSwitchDefault>Default value</div>
+        </div>
+        
+        <br>
+
+    </li>
+</ul>

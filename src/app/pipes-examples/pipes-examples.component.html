@@ -1,0 +1,10 @@
+<p>pipes-examples works!</p>
+
+<!-- these are some of the inbuilt pipes -->
+<p>{{myName|uppercase}}</p>
+<p>{{myName|lowercase}}</p>
+<p>{{ todaysDate | date }}</p>
+<p>{{ todaysDate | date:'shortDate' }}</p>
+
+<!-- using custom pipe -->
+<p>{{ myName | customPipe:30 }}</p>

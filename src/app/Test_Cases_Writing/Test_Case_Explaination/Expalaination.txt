@@ -1,0 +1,151 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[1] What is 'ComponentFixture' and 'TestBed' used for in Angular test case writing?
+
+=>  1] In Angular, ComponentFixture is a class that provides a way to create, manipulate, and interact 
+       with a component instance during unit testing.
+
+    2] When writing unit tests for Angular components, you can use ComponentFixture to create an 
+       instance of the component, access its properties and methods, and interact with its HTML template. 
+       It provides a way to simulate user interactions and test the behavior of the component in 
+       response to those interactions.
+
+    3] ComponentFixture is typically created using the TestBed utility, which is an Angular testing utility that 
+       provides a test module environment to configure and create components for testing.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[2] What is 'describe' method in Angular testing?
+
+=> 1] In Angular testing, the describe method is a Jasmine function that is used to define a suite 
+      of related test cases. A suite is a group of tests that are related to a specific feature or functionality
+      of the component being tested.
+
+   2] The describe function takes two parameters: a string description of the suite and a callback function 
+      that contains the individual test cases. The callback function can contain one or more it functions, 
+      which are used to define the individual test cases.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[3] What is 'it' method in Angular testing?
+
+=> 1] In Angular testing, the it function is a Jasmine function that is used to define an individual test case.
+      The it function takes two parameters: a string description of the test case and a callback function that 
+      contains the test logic.
+
+   2] The it function is typically used inside a describe function, which defines a suite of related test cases. 
+      Each it function should test a specific behavior or functionality of the component being tested.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[4] What is 'beforeEach' method in Angular testing?
+
+=> 1] In Angular testing, the beforeEach() method is a Jasmine function that is used to set up the testing 
+      environment before each test case runs. It allows you to define a common set of actions that should be 
+      executed before each test case in a suite.
+
+   2] The beforeEach function takes a callback function that contains the code to set up the testing environment. 
+      This can include configuring the TestBed module, creating test fixtures, and initializing component instances.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[5] What is 'spyOn' method in Angular testing?
+
+=> 1] In Angular testing, the spyOn method is a Jasmine function that is used to create a spy object 
+      for a function or method. The spy object can be used to monitor how the function or method is called 
+      and how it behaves during testing.
+
+   2] The spyOn method takes two parameters: the object containing the method to be spied on, and the name 
+      of the method to be spied on. Once the spy object is created, you can use it to intercept and track 
+      calls to the spied-on method, and even modify its behavior.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[6] Test case running commands: 
+
+[6.1] How to run Single test cases file in Angular?
+
+=> 1] ng  test --include=<your test case file path>
+      
+      eg: ng  test --include=src\app\Test_Cases_Writing\input-name\input-name.component.spec.ts
+      
+   2] Or else if the above command is not working then, inside 'test.ts' file give your specific test
+      case file path inside below method:
+
+      method name: const context = require.context('./', true, /\.spec\.ts$/);
+
+      Here, instead of './' give your test case file path 
+
+[6.2] How to run all test cases?
+
+=> 1] ng test
+
+[6.3] How to exclude a test case file from Angular?
+
+=> 1] ng test --exclude=path/to/test-file.spec.ts
+
+[6.4] How to continuously run your test cases on file changes in Angular?
+
+=> 1] ng test --watch
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[7] What is detectChanges() method in Angular testing?
+
+=> 1] In Angular testing, the detectChanges() method is a method of the ComponentFixture class that 
+      triggers change detection for a test fixture.
+
+   2] When you create a test fixture using the TestBed.createComponent() method, the fixture is created 
+      in a "no change detection" mode. This means that changes to the component's properties or state will 
+      not be detected and updated automatically.
+
+   3] To detect changes manually, you can call the detectChanges() method on the fixture object. This method 
+      triggers change detection for the component and its child components, and updates the view accordingly.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[8] What is 'fixture.nativeElement' in Angular testing?
+
+=> 1] In Angular testing, fixture.nativeElement is a property of the ComponentFixture object that provides 
+      access to the DOM element of the component being tested.
+
+   2] The nativeElement property returns the root element of the component's template, which is a plain 
+      JavaScript object representing the DOM element. You can use this object to manipulate or inspect the DOM 
+      element and its properties in your test cases.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[9] What is expect() method in Angular testing?
+
+=> 1] In Angular testing, expect() is a function that is used to define an assertion in your test case. 
+   
+   2] The expect() function takes a value as an argument and returns an object with a number of methods that allow 
+      you to define expectations about the value.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+[10] what is toHaveBeenCalled() method in Angular?
+
+=> 1] In Angular testing, the toHaveBeenCalled() method is a matcher provided by the Jasmine testing framework. 
+      It is used to verify whether a function or method has been called during the execution of a test case.
+
+   2] The toHaveBeenCalled() matcher is typically used in conjunction with a spy. A spy is a test double that records calls
+      made to a function or method. By creating a spy, you can track whether the function or method has been called and use matchers 
+      like toHaveBeenCalled() to make assertions in your test cases.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+

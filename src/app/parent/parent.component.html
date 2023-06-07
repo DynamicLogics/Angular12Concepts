@@ -1,0 +1,25 @@
+<!-- <p>parent works!</p> -->
+<h2>Parent Component</h2>
+
+<!-- 
+    To use [(ngModel)] inside the parent html/template we need to import the 
+    FormsModule in parent component as:
+    import { FormsModule } from '@angular/forms';
+    and also import this FormsModule inside modules component too
+-->
+
+<!--
+<input [(ngModel)]="parentData" placeholder="Enter data">
+<app-child [childData]="parentData"></app-child>
+-->
+
+<br>
+<h2>Parent Component Receive data from child</h2>
+<h3>Child component selector called insde parent html page</h3>
+<!--<app-child #childRef></app-child>-->
+<!-- here I'am binding the 'sendDataEvent' event emiiter present inside my
+child component with the 'getChildData($event)' method present inside my parent component -->
+<app-child (sendDataEvent)="getChildData($event)"></app-child>
+<br><br>
+<!--<button (click)="getChildData($event)">Parent Data</button>-->
+<br>
